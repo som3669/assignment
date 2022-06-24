@@ -34,8 +34,8 @@ add_action('after_setup_theme','fse_setup_theme');
 
 function assign_theme_script(){
 //    wp_enqueue_style('/stylesheet',get_template_directory_uri().'/style.css');
-    wp_enqueue_style('/stylesheet',get_stylesheet_uri(),[],filemtime(get_template_directory().'/style.css'),'all');
-
+    wp_enqueue_style('main-css',FSE_CSS_URI,[],filemtime(FSE_CSS_URIPATH.'/main.css'),'all');
+    wp_enqueue_style( 'main-css' );
 }
 add_action('wp_enqueue_scripts','assign_theme_script')
 
