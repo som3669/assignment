@@ -1,1 +1,12 @@
-<h1>Custom Theme!</h1>
+<?php
+
+get_header();
+
+
+
+
+
+
+get_footer();
+
+	
