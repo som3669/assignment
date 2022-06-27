@@ -1,8 +1,12 @@
 <?php
 
 
+if(!define('CUSTOM_DIR_PATH')){
+            define('CUSTOM_DIR_PATH',untrailingslashit(get_template_directory_uri()));
+}
 
 //print_r(get_stylesheet_uri());
+require_once CUSTOM_DIR_PATH.'/inc/helpers/autoloader.php';
 
 function assign_theme_script(){
 //    wp_enqueue_style('/stylesheet',get_template_directory_uri().'/style.css');
@@ -11,6 +15,9 @@ function assign_theme_script(){
     wp_enqueue_script('bootstrap-js',get_template_directory_uri().'/assets/js/bootstrap.min.js',['jquery'],false,true);
 
 }
-add_action('wp_enqueue_scripts','assign_theme_script')
+add_action('wp_enqueue_scripts','assign_theme_script');
+
+
 
 ?>
+
