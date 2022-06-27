@@ -14,3 +14,8 @@
        wp_body_open();
    }
     ?>
+<div id="page" class="site">
+    <header>
+     <?php get_template_part('template-parts/header/nav') ?>
+    </header>
+</div>
